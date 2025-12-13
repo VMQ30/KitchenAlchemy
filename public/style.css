@@ -22,6 +22,18 @@
     font-style: normal;
 }
 
+@font-face{
+    font-family: 'Amarna';
+    src: url('fonts/Amarna-VariableFont_wght.ttf');
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-VariableFont_wght.ttf');
+    font-style: normal;
+}
+
 *{
     margin:0;
     border:0;
@@ -32,6 +44,8 @@ html{
     background-color: var(--background);
 }
 
+/*Header Styling*/
+
 header{
     background-color: #0d0514d0;
     backdrop-filter: blur(10px);
@@ -40,18 +54,140 @@ header{
     z-index: 100;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    align-items: center;
+    padding: 10px 30px;
     border-bottom: 2px solid var(--purple-medium);
 
 }
 
 header h1{
+    font-size: 2.5em;
     color: var(--gold);
     font-family: 'Alchemy';
     position: relative;
     text-shadow: 0 0 10px var(--mystic-glow);
 }
 
-h2{
-    font-family: 'Alchemy';
+.login{
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--gold);
+    border: 2px ridge var(--gold);
+    padding: 5px;
+    width: 7vw;
+    font-family: 'Amarna';
+    font-size: 1em;
+    font-weight: 900;
+    background-image: linear-gradient(180deg, transparent 50%, var(--gold)50%, var(--gold)100%);
+    background-size: 100% 200%;
+    background-position: top;
+    transition: 0.3s ease;
 }
+
+.login:hover{
+    background-position: bottom;
+    color: var(--purple-deep);
+    transform: translateY(-10%);
+    box-shadow: 0 5px 10px #cd9a0094;
+}
+
+/*Navigation bar*/
+
+nav{
+    padding: 15px 0;
+    box-shadow: 0 5px 10px var(--purple-medium);
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+li{
+    color: var(--muted-foreground);
+    font-family: 'Montserrat';
+    font-weight: 450;
+    cursor: pointer;
+}
+
+/*Hero Section*/
+
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.hero-section h2{
+    background-image: linear-gradient(90deg , var(--gold-light) 0% , var(--gold) 50% , var(--gold-dark) 90% );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Alchemy';
+    font-weight: 900;
+    font-size: 5em;
+    text-shadow: 0 0 50px var(--mystic-glow);
+}
+
+.hero-section p{
+    margin: 10px 0;
+    margin-bottom: 30px;
+    color: var(--foreground);
+    font-family: 'Amarna';
+    font-size: 1.2em;
+}
+
+.cta-wrapper{
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    background-color: var(--purple-medium);
+    margin-bottom: 10px;
+    transition: 0.3s ease;
+    position: relative;
+    z-index: 0;
+}
+
+.cta{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+    background-color: var(--purple-medium);
+}
+
+.cta input{
+    width: 100%;
+    padding: 5px; 
+    background-color: transparent;
+    color: var(--muted-foreground);
+    font-size: 1.2em;
+    outline: none;
+    border: none;
+    caret-color: var(--muted-foreground);
+}
+
+.cta input::placeholder{
+    color:#584b60;
+}
+
+.cta-wrapper:has(input:focus){
+    transform: translateY(-10%);
+    /* box-shadow: 0 5px 20px 5px var(--purple-light); */
+}
+
+.cta-wrapper:has(input:focus)::before{
+    content: '';
+    width: 101%;
+    height: 101%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFBF00;
+    z-index: -1;
+}
+
