@@ -4,10 +4,355 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RecipeAlchemy</title>
+    <link rel = 'stylesheet' href = 'style.css'>
 </head>
 
 <body>
+    <header>
+        <h1 >KitchenAlchemy</h1>
+        <div class = 'header-buttons'>
+            <button class = 'search'>Search</button>
+            <button class = 'login'>Login</button>
+        </div>
+    </header>
 
+    <nav>
+        <ul>
+            <li>Ingredient</li>
+            <li>Dish Type</li>
+            <li>Meal Type</li>
+            <li>Cuisine</li>
+            <li>Diet</li>
+            <li>Health</li>
+        </ul>
+    </nav>
+
+    <article>
+
+        <div class = 'hero-section'>
+            <h2 class = 'title'>KitchenAlchemy</h2>
+            <p class = 'tagline'>Transform everyday ingredients into extraordinary meals. Find recipes by ingredient, diet, or cuisine.</p>
+
+            <div class = 'cta'>
+                <input class = 'cta-search' type = 'search' placeholder = 'Search for recipes...'>
+                <button class = 'cta-button'>Search</button>
+            </div>
+
+            <div class = 'filters'>
+                <button class = 'filter-button'>Quick Meals</button>
+                <button class = 'filter-button'>Healthy</button>
+                <button class = 'filter-button'>Vegan</button>
+                <button class = 'filter-button'>Diabetic Friendly</button>
+                <button class = 'filter-button'>Random</button>
+            </div>
+        </div>
+
+        <div class = 'featured'>
+            <div class = 'featured-title'>
+                <h3>Featured Category</h3>
+                <p>Explore recipes by your favorite category</p>
+            </div>
+
+            <div class = 'featured-wrapper'>
+                <button class = 'prev'>&#10094;</button>
+
+                <div class = 'featured-cards-container'>
+                    <div class = 'featured-cards'>
+                        <p>Chicken</p>
+                    </div>
+
+                    <div class = 'featured-cards'>
+                        <p>Pasta</p>
+                    </div>
+
+                    <div class = 'featured-cards'>
+                        <p>Dessert</p>
+                    </div>
+
+                    <div class = 'featured-cards'>
+                        <p>Asian</p>
+                    </div>
+
+                    <div class = 'featured-cards'>
+                        <p>Breakfast</p>
+                    </div>
+
+                </div>
+                <button class = 'next'>&#10095;</button>
+
+            </div>
+        </div>
+
+        <div class = 'trending'>
+            <div class = 'trending-title'>
+                <h3>Trending Now!</h3>
+                <div class = 'trending-caption'>
+                    <p>Discover what home cooks are making right now</p>
+                    <a href = '#'>View All Recipes -></a>
+                </div>
+
+                <div class = 'trending-recipe'>
+                    <p>Click the card to flip!</p>
+                    <div class = 'trending-grid'>
+                        <div class = 'trending-card'>
+                            <div class = 'trending-picture'>
+                                <div id='heart' class='button'></div>
+                            </div>
+                            <div class = 'trending-details'>
+                                <h3>Recipe Name</h3>
+                                <div class = 'recipe-details'>
+                                    <p class = 'recipe-time'>00 mins</p>
+                                    <p class = 'recipe-calories'>0 cal</p>
+                                </div>
+                                <div class = 'recipe-tags-container'>
+                                    <div class = 'recipe-tags'>
+                                        <p>Tags</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = 'trending-grid'>
+                    <div class = 'trending-card'>
+                        <div class = 'trending-picture'>
+                            <div class = 'trending-rating'>
+                                <img>
+                                <p class = 'trending-recipe-rating'>0.0</p>
+                            </div>
+                        </div>
+                        <div class = 'trending-details'>
+                            <h3>Recipe Name</h3>
+                            <div class = 'recipe-details'>
+                                <p class = 'recipe-time'>00 mins</p>
+                                <p class = 'recipe-calories'>0 cal</p>
+                            </div>
+                            <div class = 'recipe-tags-container'>
+                                <div class = 'recipe-tags'>
+                                    <p>Tags</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = 'trending-grid'>
+                    <div class = 'trending-card'>
+                        <div class = 'trending-picture'>
+                            <div class = 'trending-rating'>
+                                <img>
+                                <p class = 'trending-recipe-rating'>0.0</p>
+                            </div>
+                        </div>
+                        <div class = 'trending-details'>
+                            <h3>Recipe Name</h3>
+                            <div class = 'recipe-details'>
+                                <p class = 'recipe-time'>00 mins</p>
+                                <p class = 'recipe-calories'>0 cal</p>
+                            </div>
+                            <div class = 'recipe-tags-container'>
+                                <div class = 'recipe-tags'>
+                                    <p>Tags</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = 'trending-grid'>
+                    <div class = 'trending-card'>
+                        <div class = 'trending-picture'>
+                            <div class = 'trending-rating'>
+                                <img>
+                                <p class = 'trending-recipe-rating'>0.0</p>
+                            </div>
+                        </div>
+                        <div class = 'trending-details'>
+                            <h3>Recipe Name</h3>
+                            <div class = 'recipe-details'>
+                                <p class = 'recipe-time'>00 mins</p>
+                                <p class = 'recipe-calories'>0 cal</p>
+                            </div>
+                            <div class = 'recipe-tags-container'>
+                                <div class = 'recipe-tags'>
+                                    <p>Tags</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = 'trending-grid'>
+                    <div class = 'trending-card'>
+                        <div class = 'trending-picture'>
+                            <div class = 'trending-rating'>
+                                <img>
+                                <p class = 'trending-recipe-rating'>0.0</p>
+                            </div>
+                        </div>
+                        <div class = 'trending-details'>
+                            <h3>Recipe Name</h3>
+                            <div class = 'recipe-details'>
+                                <p class = 'recipe-time'>00 mins</p>
+                                <p class = 'recipe-calories'>0 cal</p>
+                            </div>
+                            <div class = 'recipe-tags-container'>
+                                <div class = 'recipe-tags'>
+                                    <p>Tags</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = 'trending-grid'>
+                    <div class = 'trending-card'>
+                        <div class = 'trending-picture'>
+                            <div class = 'trending-rating'>
+                                <img>
+                                <p class = 'trending-recipe-rating'>0.0</p>
+                            </div>
+                        </div>
+                        <div class = 'trending-details'>
+                            <h3>Recipe Name</h3>
+                            <div class = 'recipe-details'>
+                                <p class = 'recipe-time'>00 mins</p>
+                                <p class = 'recipe-calories'>0 cal</p>
+                            </div>
+                            <div class = 'recipe-tags-container'>
+                                <div class = 'recipe-tags'>
+                                    <p>Tags</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class = 'quick-search'>
+            <h3>What Would You Like to Cook?</h3>
+            <p>Find exactly what you're craving!</p>
+
+            <div class = 'quick-search-filters'>
+                <div class = 'diet-filter'>
+                    <h2>Diet:</h2>
+                    <select class = 'diet'>
+                        <option>Any</option>
+                        <option>Balanced</option>
+                        <option>High Fiber</option>
+                        <option>High Protein</option>
+                        <option>Low Carb</option>
+                        <option>Low Fat</option>
+                        <option>Low Sodium</option>
+                    </select>
+                </div>
+
+                <div class = 'health-filter'>
+                    <h2>Health:</h2>
+                    <select class = 'health'>
+                        <option>Any</option>
+                        <option>Alcohol Free</option>
+                        <option>Crustacean Free</option>
+                        <option>Dairy Free</option>
+                        <option>DASH</option>
+                        <option>Egg Free</option>
+                        <option>Fish Free</option>
+                        <option>Fodmap Free</option>
+                        <option>Gluten Free</option>
+                        <option>Immuni-Supportive</option>
+                        <option>Keto Friendly</option>
+                        <option>Kidney-Free</option>
+                        <option>Kosher</option>
+                        <option>Low Potassium</option>
+                        <option>Low Sugar</option>
+                        <option>Lupine Free</option>
+                        <option>Mediterranean</option>
+                        <option>Mollusk Free</option>
+                        <option>Paleo</option>
+                        <option>Peanut Free</option>
+                        <option>Pescatarian</option>
+                        <option>Pork Free</option>
+                        <option>Red Meat Free</option>
+                        <option>Sesame Free</option>
+                        <option>Shellfish Free</option>
+                        <option>Treenut Free</option>
+                        <option>Vegan</option>
+                        <option>Vegetarian</option>
+                        <option>Wheat Free</option>
+                    </select>
+                </div>
+
+                <div class = 'cuisine-filter'>
+                    <h2>Cuisine:</h2>
+                    <select class = 'cuisine'>
+                        <option>Any</option>
+                        <option>American</option>
+                        <option>Asian</option>
+                        <option>British</option>
+                        <option>Carribean</option>
+                        <option>Central Europe</option>
+                        <option>Chinese</option>
+                        <option>Eastern Europe</option>
+                        <option>French</option>
+                        <option>Greek</option>
+                        <option>Indian</option>
+                        <option>Italian</option>
+                        <option>Japanese</option>
+                        <option>Korean</option>
+                        <option>Kosher</option>
+                        <option>Mediterranean</option>
+                        <option>Mexican</option>
+                        <option>Middle Eastern</option>
+                        <option>Nordic</option>
+                        <option>South American</option>
+                        <option>South East Asian</option>
+                    </select>
+                </div>
+
+                <button class = 'quick-search-button'>Search</button>
+            </div>
+        </div>
+
+        <div class = 'health-section'>
+            <h3>Nutrition-Focused</h3>
+            <p>Find recipes that match your dietary needs</p>
+
+            <div class = 'health-section-container'>
+                <div class = 'health-section-cards'>
+                    <div class = icon></div>
+                    <h4>Low Sodium</h4>
+                    <p>Heart-healthy options under 500mg sodium</p>
+                </div>
+
+                <div class = 'health-section-cards'>
+                    <div class = icon></div>
+                    <h4>Diabetic-Friendly</h4>
+                    <p>Balanced recipes with low glycemic index</p>
+                </div>
+
+                <div class = 'health-section-cards'>
+                    <div class = icon></div>
+                    <h4>Keto Favorites</h4>
+                    <p>High-fat, low-carb delicious meals</p>
+                </div>
+
+                <div class = 'health-section-cards'>
+                    <div class = icon></div>
+                    <h4>High Fiber</h4>
+                    <p>Gut-friendly recipes for digestive health</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+
+    </footer>
 </body>
 
 <script src = 'recipe.js'></script>

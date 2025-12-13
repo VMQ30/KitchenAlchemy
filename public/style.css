@@ -1,0 +1,57 @@
+:root{
+    --gold: #D9A826;
+    --gold-light: #EBC94F;
+    --gold-dark: #8F7016;
+    --mystic-glow: #FFBF00;
+
+    --purple-deep: #0D0514;
+    --purple-medium: #1A0F24;
+    --purple-light: #38264A;
+
+    --foreground: #EBE5DB;
+    --muted-foreground: #A391AD;
+
+    --background: #0D0514;
+    --card: #1A0F24;
+    --border: #38264A;
+}
+
+@font-face {
+    font-family: 'Alchemy';
+    src: url('fonts/Elemental-lg5B0.ttf');
+    font-style: normal;
+}
+
+*{
+    margin:0;
+    border:0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: var(--background);
+}
+
+header{
+    background-color: #0d0514d0;
+    backdrop-filter: blur(10px);
+    position:sticky;
+    top:0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 2px solid var(--purple-medium);
+
+}
+
+header h1{
+    color: var(--gold);
+    font-family: 'Alchemy';
+    position: relative;
+    text-shadow: 0 0 10px var(--mystic-glow);
+}
+
+h2{
+    font-family: 'Alchemy';
+}
