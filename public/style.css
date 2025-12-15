@@ -162,6 +162,7 @@ li{
     padding: 40px;
     position: relative;
     height: 75vh;
+    box-shadow: 0 20px 20px var(--purple-medium);
 }
 
 .hero-section::before{
@@ -304,9 +305,9 @@ li{
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.51);
     color: var(--muted-foreground);
-    font-family: 'Amarna';
-    font-weight: 700;
-    padding: 7px 30px;
+    font-family: 'Montserrat';
+    font-weight: 450;
+    padding: 7px 25px;
     margin-right: 10px;
     font-size: 1.2em;
     transition: 0.3s ease;
@@ -317,4 +318,129 @@ li{
     transform: translateY(-10%);
     box-shadow: 0 5px 5px rgba(45, 0, 62, 0.5);
     color: var(--foreground)
+}
+
+/*Featured Category*/
+
+.featured{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.featured-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.featured-title h3{
+    font-size: 3em;
+    font-family: 'Alchemy';
+    color: var(--muted-foreground);
+}
+
+.featured-title p{
+    margin-top: 5px;
+    font-size: 1.3em;
+    color: var(--muted-foreground);
+    font-family: 'Amarna';
+}
+
+.featured-wrapper{
+    background-color: transparent;
+    padding: 20px;
+    margin-top: 40px;
+    width: 75%;
+}
+
+.featured-cards-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.featured-cards{
+    background-color: var(--gold);
+    position: relative;
+    height: 40vh;
+    width: 100%;
+    z-index: 0;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.featured-cards::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left:0;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    z-index: -1;
+    background-image: linear-gradient(180deg, transparent 60% , var(--purple-deep) 100%);
+    transition: 0.3s ease-in-out;
+}
+
+.featured-cards:hover{
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.featured-cards:hover::before{
+    transform: scaleY(1);
+}
+
+.featured-cards-container:has(div:hover) div:not(:hover){
+    filter: blur(2px);
+    opacity: 0.7;
+}
+
+.featured-cards p{
+    margin-bottom: 40px;
+    font-family: 'Amarna';
+    font-size: 1.5em;
+    color: var(--foreground);
+    transform: translateY(100%);
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.featured-cards:hover p{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.featured-cards:nth-child(1){
+    background-image: url('photos/chicken.jpg');
+    background-size: cover;
+}
+
+.featured-cards:nth-child(2){
+    background-image: url('photos/pasta.jpg');
+    background-size: cover;
+}
+
+.featured-cards:nth-child(3){
+    background-image: url('photos/dessert.jpg');
+    background-size: cover;
+}
+
+.featured-cards:nth-child(4){
+    background-image: url('photos/asian.avif');
+    background-size: cover;
+}
+
+.featured-cards:nth-child(5){
+    background-image: url('photos/breakfast.jpeg');
+    background-size: cover;
 }
