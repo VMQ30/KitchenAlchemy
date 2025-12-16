@@ -690,6 +690,9 @@ li{
     align-items: center;
     flex-direction: column;
     padding: 40px;
+    animation: scrolling linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
 }
 
 .quick-search h3{
@@ -749,3 +752,73 @@ li{
 .quick-search-button:hover{
     box-shadow: 0 0 10px var(--mystic-glow);
 }
+
+.health-section{
+    background-color: var(--muted-foreground);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.health-section h3{
+    font-family: 'Alchemy';
+    font-size: 3em;
+    color: var(--purple-light);
+}
+
+.health-section p{
+    font-family: 'Amarna';
+    font-size: 1.5em;
+    color: var(--purple-light);
+}
+
+.health-section-container{
+    width: 75%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.health-section-cards{
+    background-image: linear-gradient(180deg , var(--purple-light) 0% , var(--purple-deep) 80%);
+    height: 35vh;
+    padding: 20px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out,
+                box-shadow 0.3s ease-in-out;
+}
+
+.health-section-cards h4{
+    font-family: 'Amarna';
+    font-size: 1.8em;
+    color: var(--foreground);
+}
+
+.health-section-cards p{
+    color: var(--muted-foreground);
+    font-family: 'Montserrat';
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.health-section-button{
+    padding: 7px;
+    background: transparent;
+    border: 2px solid var(--muted-foreground);
+    color: var(--muted-foreground);
+    font-size: 1em;
+    font-family: 'Montserrat';
+    cursor: pointer;
+}
+
+.health-section-cards:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
