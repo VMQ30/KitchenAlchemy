@@ -43,22 +43,18 @@ async function getGeneralRecipe( query ){
     return recipeList
 }
 
-async function getAllRecipe(){
+async function getAllRecipe(keywords){
     const allRecipes = []
-//    const keywords = [ 'chicken' , 'beef' , 'pork' , 'dessert' , 'vegetable' , 'bread' , 'egg' , 'soup' , 'salad' , 'fish' ]
-    const keywords = [ 'chicken' , 'beef' , 'pork' , 'dessert' , 'vegetable' ]
+    //const keywords = [ 'chicken' , 'beef' , 'pork' , 'dessert' , 'vegetable' , 'bread' , 'egg' , 'soup' , 'salad' , 'fish' ]
 
     for (const keyword of keywords) {
         const recipePage = await getGeneralRecipe(keyword)
         allRecipes.push(...recipePage)
     }
 
-    console.log(allRecipes)
-
     return allRecipes
-    // allRecipes.forEach((recipe) => {
-    //     console.log(recipe.recipe.label)
-    // })
-
 }
+
+export { getAllRecipe };
+
 
