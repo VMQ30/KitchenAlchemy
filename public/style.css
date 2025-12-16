@@ -471,7 +471,8 @@ li{
     justify-content: center;
     align-items: center;
     padding-top: 40px;
-    
+    padding-bottom: 40px;
+
 }
 
 .trending-wrapper{
@@ -533,4 +534,100 @@ li{
 
 .trending-caption a:hover::before{
     background-position: left;
+}
+
+.trending-recipe{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.trending-recipe h5{
+    font-family: 'Montserrat';
+    font-size: 1em;
+    color: var(--muted-foreground);
+    font-weight: 450;
+    margin-bottom: 40px;
+}
+
+.trending-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25px;
+}
+
+.trending-card{
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    height: 55vh;
+    perspective: 1000px;
+}
+
+.card-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    transform-style: preserve-3d;
+    background-color: var(--purple-medium);
+
+}
+
+.trending-card:hover{
+    transform: translateY(-3%);
+    box-shadow: 0 10px 10px var(--purple-medium);
+}
+
+.flip-card{
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-back{
+    transform: rotateY(180deg);
+}
+
+.trending-picture{
+    height: 75%;
+    width: 100%;
+    background-color: var(--gold);
+}
+
+.trending-details{
+    margin: 10px;
+}
+
+.trending-details h4{
+    font-family: 'Amarna';
+    font-size: 1.2em;
+    color: var(--gold);
+    text-shadow: 0 0 10px var(--mystic-glow);
+    margin-bottom: 5px;
+}
+
+.recipe-details{
+    display: flex;
+    align-items: center;
+}
+
+.recipe-details p{
+    margin-right: 30px;
+    font-family: 'Montserrat';
+    color: var(--gold-dark)
+}
+
+.recipe-time{
+    margin-left: 5px;
 }
