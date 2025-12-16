@@ -563,7 +563,7 @@ li{
     background-color: transparent;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    height: 55vh;
+    height: 45vh;
     perspective: 1000px;
 }
 
@@ -625,9 +625,27 @@ li{
 .recipe-details p{
     margin-right: 30px;
     font-family: 'Montserrat';
-    color: var(--gold-dark)
+    color: var(--gold-dark);
+    font-weight: 500;
 }
 
 .recipe-time{
     margin-left: 5px;
+}
+
+.card-back{
+    padding: 10px 20px;
+}
+.card-back h6{
+    font-size: 2em;
+    font-family: 'Alchemy';
+    color: var(--gold-light);
+    text-shadow: 0 0 10px var(--mystic-glow);
+    margin-bottom: 10px;
+}
+
+.card-back p{
+    font-family: 'Amarna';
+    font-size: 1.2em;
+    color: var(--gold);
 }
