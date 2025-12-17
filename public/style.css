@@ -595,7 +595,7 @@ li{
     background-color: transparent;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    height: 45vh;
+    height: 60vh;
     perspective: 1000px;
 }
 
@@ -611,7 +611,7 @@ li{
 
 .trending-card:hover{
     transform: translateY(-3%);
-    box-shadow: 0 10px 10px var(--purple-medium);
+    box-shadow: 0 0 15px var(--purple-deep);
 }
 
 .flip-card{
@@ -629,16 +629,52 @@ li{
 
 .card-back{
     transform: rotateY(180deg);
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-back-details p{
+    margin-bottom: 15px;
+}
+
+.card-back button{
+    margin-bottom: 10px;
+    padding: 5px;
+    background-image: linear-gradient(90deg , var(--gold-light) 0% , var(--gold) 30% , var(--gold-dark) 60% );
+    color: var(--purple-deep);
+    font-size: 1.1em;
+    font-family: 'Amarna';
+    font-weight: 900;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.card-back button:hover{
+    box-shadow: 0 0 10px #ffbf00ad;
 }
 
 .trending-picture{
     height: 75%;
     width: 100%;
     background-color: var(--gold);
+    background-size: 130%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.3s ease-in-out;
+}
+
+.trending-card:hover .trending-picture{
+    background-size: 145%;
+    background-position: center;
 }
 
 .trending-details{
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .trending-details h4{
@@ -655,12 +691,16 @@ li{
 }
 
 .recipe-details p{
-    margin-right: 30px;
+    margin-right: 5px;
+    margin-top: 5px;
     font-family: 'Montserrat';
     color: var(--gold-dark);
     font-weight: 500;
 }
 
+.recipe-dish{
+    margin-left: 5px;
+}
 .recipe-time{
     margin-left: 5px;
 }
